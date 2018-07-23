@@ -32,14 +32,22 @@ A car sales person sells an average of 2 cars per week. What's the probability t
 ```
 
 # Car Sales 2
-What's the probability that the car salesman sells 0 cars in a given week?
+What's the probability that the car salesperson sells 0 cars in a given week?
 
 
 ```python
 #Your code here
 ```
 
-# Car Sales 3!
+# Car Sales 3
+Whats' the probability that the car salesperson sells 0 cars in 2 consecutive weeks?
+
+
+```python
+#Your code here
+```
+
+# Car Sales 4!
 The sales associate is worried about not getting paid for a period of time. What's the probability that 2 weeks pass between selling one car and the next?
 
 
