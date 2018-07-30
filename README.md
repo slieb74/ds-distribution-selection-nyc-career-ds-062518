@@ -28,28 +28,93 @@ A car sales person sells an average of 2 cars per week. What's the probability t
 
 
 ```python
-#Your code here
+import scipy.stats as st
 ```
+
+
+```python
+st.poisson.pmf(4, 2)
+```
+
+
+
+
+    0.09022352215774178
+
+
 
 # Car Sales 2
-What's the probability that the car salesman sells 0 cars in a given week?
+What's the probability that the car salesperson sells 0 cars in a given week?
 
 
 ```python
-#Your code here
+st.poisson.pmf(0,2)
 ```
 
-# Car Sales 3!
-The sales associate is worried about not getting paid for a period of time. What's the probability that 2 weeks pass between selling one car and the next?
+
+
+
+    0.1353352832366127
+
+
+
+# Car Sales 3
+Whats' the probability that the car salesperson sells 0 cars in 2 consecutive weeks?
 
 
 ```python
-#Your code here
+st.poisson.pmf(0,2)**2
 ```
+
+
+
+
+    0.018315638888734182
+
+
+
+or
+
+
+```python
+st.poisson.pmf(0,4)
+```
+
+
+
+
+    0.01831563888873418
+
+
+
+# Car Sales 4!
+The sales associate is worried about not getting paid for a period of time. What's the probability that 2 weeks (or more) pass between selling one car and the next?
+
+
+```python
+import scipy.stats as st
+```
+
+
+```python
+1 - st.expon.cdf(2, scale=0.5)
+```
+
+
+
+
+    0.01831563888873422
+
+
 
 # SAT Scores
 Below is a sample of SAT scores (yes SAT scores are now out of 2400 not 1600):
 Assuming the sample is representative, what would be the estimated percentile rank be of someone who scored a 2000?
+
+
+```python
+import numpy as np
+```
 
 
 ```python
@@ -60,24 +125,47 @@ Assuming the sample is representative, what would be the estimated percentile ra
 
 
 ```python
-#Your code here
+import scipy.stats as st
+z = (2000-np.mean(scores))/np.std(scores)
+st.norm.cdf(z)
 ```
+
+
+
+
+    0.9578688788330638
+
+
 
 # Coin Flips
 Assuming that you're using a fair coin, what's the probability of flipping 8 heads on 10 flips?
 
 
 ```python
-#Your code here
+st.binom.pmf(8,10,0.5)
 ```
+
+
+
+
+    0.04394531249999999
+
+
 
 # Coin Flips 2
 What's the probability that you have to flip a coin 5 times in order to get the first head?
 
 
 ```python
-#Your code here
+st.geom.pmf(5, 0.5)
 ```
+
+
+
+
+    0.03125
+
+
 
 # Trains
 Assuming the train system is on a perfect schedule where trains show up exactly every 10 minutes (ignoring reality).
@@ -85,5 +173,13 @@ What is the probability that a rider who randomly shows up has to wait at least 
 
 
 ```python
-#Your code here
+#Uniform Distribution;
+.7
 ```
+
+
+
+
+    0.7
+
+
