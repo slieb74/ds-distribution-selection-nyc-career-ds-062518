@@ -48,7 +48,7 @@ Whats' the probability that the car salesperson sells 0 cars in 2 consecutive we
 ```
 
 # Car Sales 4!
-The sales associate is worried about not getting paid for a period of time. What's the probability that 2 weeks pass between selling one car and the next?
+The sales associate is worried about not getting paid for a period of time. What's the probability that 2 weeks (or more) pass between selling one car and the next?
 
 
 ```python
@@ -58,6 +58,11 @@ The sales associate is worried about not getting paid for a period of time. What
 # SAT Scores
 Below is a sample of SAT scores (yes SAT scores are now out of 2400 not 1600):
 Assuming the sample is representative, what would be the estimated percentile rank be of someone who scored a 2000?
+
+
+```python
+import numpy as np
+```
 
 
 ```python
